@@ -14,8 +14,8 @@ $ ./status.sh r  # reset
 #### インストール情報
 
 ```
-express -e node-arduino
-npm install -g serialport
-
+$ express -e node-arduino
+$ npm install -g serialport としてある
+$ npm link serialport でリンク作成
 ```
 
