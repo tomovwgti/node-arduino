@@ -11,3 +11,13 @@ $ ./status.sh s  # success
 $ ./status.sh r  # reset
 ```
 
+#### インストール情報
+
+```
+express -e node-arduino
+npm install -g serialport
+npm install 
+
+```
+
+

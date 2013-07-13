@@ -10,8 +10,7 @@ var express = require('express')
 
 var app = express()
     , http = require('http')
-    , server = http.createServer(app)
-    , io = require('socket.io').listen(server);
+    , server = http.createServer(app);
 
 // Serial Port
 var portName = '/dev/tty.usbmodemfd13431'; // Mac環境
@@ -45,12 +44,6 @@ app.configure('development', function(){
 // Routes
 app.get('/', routes.index);
 server.listen(app.get('port'));
-
-// クライアントが接続してきたときの処理
-io.sockets.on('connection', function(socket) {
-    console.log("connection");
-
-});
 
 sp.on('close', function(err) {
     console.log('port closed');
