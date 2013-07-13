@@ -1,7 +1,9 @@
-## Arduinoをhttpから制御する
+## Arduinoをシェルスクリプトで制御する
 =====
 
 JenkinsのステータスをArduinoに出力したい(未完成)
+
+Node.jsサーバを作成して、node-serial経由で制御するという回り道...
 
 #### スクリプトの使い方
 ```
