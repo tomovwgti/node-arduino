@@ -16,8 +16,6 @@ $ ./status.sh r  # reset
 ```
 express -e node-arduino
 npm install -g serialport
-npm install 
 
 ```
-
 
