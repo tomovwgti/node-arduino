@@ -13,7 +13,7 @@ var app = express()
     , server = http.createServer(app);
 
 // Serial Port
-var portName = '/dev/tty.usbmodemfd13431'; // Mac環境
+var portName = '/dev/ttyACM0'; // Ubuntu環境
 var sp = new serialport.SerialPort(portName, {
     baudRate: 9600,
     dataBits: 8,
