@@ -9,9 +9,9 @@
 #define LED_GREEN  5
 
 void setup() {
-  pinMode(LED_RED, OUTPUT);     // 赤LED接続のピン(9番)をアナログ出力に設定
-  pinMode(LED_BLUE, OUTPUT);     // 青LED接続のピン(10番)をアナログ出力に設定
-  pinMode(LED_GREEN, OUTPUT);     // 緑LED接続のピン(11番)をアナログ出力に設定
+  pinMode(LED_RED, OUTPUT);
+  pinMode(LED_BLUE, OUTPUT);
+  pinMode(LED_GREEN, OUTPUT);
   analogWrite(LED_RED, 255);
   analogWrite(LED_BLUE, 255);
   analogWrite(LED_GREEN, 255);
@@ -39,7 +39,7 @@ void loop() {
       analogWrite(LED_RED, 255);
       analogWrite(LED_BLUE, 255);
       analogWrite(LED_GREEN, 0);  // 緑LEDを点灯
-    } else if (c =='r') {
+    } else if (c =='r') { // 初期化
       Serial.println("RESET");
       analogWrite(LED_RED, 255);
       analogWrite(LED_BLUE, 255);

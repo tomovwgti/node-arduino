@@ -1,23 +1,25 @@
-## Arduinoをシェルスクリプトで制御する
+## Arduinoをコマンドライン経由で制御する
 =====
 
-JenkinsのステータスをArduinoに出力したい(未完成)
+#### 目的
+JenkinsのステータスをArduinoに出力したい
 
 Node.jsサーバを作成して、node-serial経由で制御するという回り道...
 
-#### スクリプトの使い方
+#### Arduinoの制御の方法
+下記のようなコマンドをJenkinsのシェルスクリプト実行で投げてやる
+
 ```
-$ ./status.sh e  # error
-$ ./status.sh g  # start
-$ ./status.sh s  # success
-$ ./status.sh r  # reset
+$ curl http://localhost:3000/status?status=e  # error
+$ curl http://localhost:3000/status?status=g  # start
+$ curl http://localhost:3000/status?status=s  # success
+$ curl http://localhost:3000/status?status=r  # reset
 ```
 
 #### インストール情報
 
 ```
 $ express -e node-arduino
-$ npm install -g serialport としてある
+$ npm install -g serialport #node-serialportはグローバルインストールとしてある
 $ npm link serialport でリンク作成
 ```
-
